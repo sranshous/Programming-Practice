@@ -2,6 +2,9 @@
 Tired of summing up numbers by hand for your night job as an accountant, you are
 writing your own calculator that allows you to type in a lot of numbers and sums
 them for you. Naturally, your calculator begins with a sum of 0.
+
+Every time you reach an input value of 0 output the sum so far, and reset the
+sum to 0.
 """
 
 #import sys, re
