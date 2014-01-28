@@ -5,7 +5,9 @@ them for you. Naturally, your calculator begins with a sum of 0.
 """
 
 #import sys, re
-import sys as s, re as r
+#import sys as s, re as r
+from sys import stdin as s
+from re import findall as f, split as sp
 
 # Original
 #print '\n'.join([str(ans) for ans in [sum(x) for x in [map(int, v) for v in [line.split() for line in re.findall('.*?0', ' '.join(re.split('\\s', ' '.join(sys.stdin.readlines()))))]]]])
@@ -14,4 +16,7 @@ import sys as s, re as r
 #print '\n'.join([str(sum(map(int, line.split()))) for line in re.findall('.*?0', ' '.join(re.split('\\s', sys.stdin.read())))])
 
 # Betterer
-print '\n'.join([str(sum(map(int, line.split()))) for line in r.findall('.*?0', ' '.join(s.stdin.read().split('\\s')))])
+#print '\n'.join([str(sum(map(int, line.split()))) for line in r.findall('.*?0', ' '.join(s.stdin.read().split('\\s')))])
+
+# Cheat on those imports!
+print '\n'.join([str(sum(map(int, l.split()))) for l in f('.*?0', ' '.join(sp('\\s', s.read())))])
